@@ -2,10 +2,17 @@ package com.kodilla.testing;
 import com.kodilla.testing.calculator.CalculatorEnum;
 import com.kodilla.testing.user.SimpleUser;
 import com.kodilla.testing.calculator.Calculator;
+import com.kodilla.testing.collection.OddNumbersExterminator;
+import java.util.*;
 
 public class TestingMain {
     public static void main(String[] args){
-/*Test klasy Calculator */
+
+        OddNumbersExterminator collection = new OddNumbersExterminator();
+
+        List<Integer> list1 = new ArrayList<>();
+        list1.add(8);
+/*Test klasy Calculator *//*
         Calculator calculator = new Calculator();
 
         int resultAdd = calculator.add(2,4);
@@ -33,7 +40,7 @@ public class TestingMain {
         }
 
 
-/* Test klasy SimpleUser */
+/* Test klasy SimpleUser */ /*
         SimpleUser simpleUser = new SimpleUser("theForumUser");
 
         String result = simpleUser.getUsername();
@@ -42,7 +49,7 @@ public class TestingMain {
             System.out.println("test OK");
         } else {
             System.out.println("Error!");
-        }
+        }*/
 
 
     }
