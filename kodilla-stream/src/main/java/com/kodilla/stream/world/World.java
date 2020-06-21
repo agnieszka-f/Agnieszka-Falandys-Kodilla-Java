@@ -3,22 +3,19 @@ import java.util.*;
 import java.math.*;
 
 public final class World{
-    final List<List<Country>> list;
 
-    public World(){
-        Continent continent = new Continent();
-        list = Arrays.asList(continent.getAsiaList(),continent.getEuropeList(),continent.getAfricaList(),continent.getAmericaList());
+    private final List<Continent> list;
+
+    public World(final List<Continent> list){
+        this.list = new ArrayList<>(list);
     }
 
     public BigDecimal getPeopleQuantity(){
         BigDecimal result = list.stream()
-                .flatMap(x -> x.stream())
+                .flatMap(x -> x.getListOfCountries().stream())
                 .map(x -> x.numberOfPeople())
                 .reduce(BigDecimal.ZERO, (sum, x) -> sum.add(x));
 
         return result;
-    }
-    public void test(){
-        System.out.println(list);
     }
 }
