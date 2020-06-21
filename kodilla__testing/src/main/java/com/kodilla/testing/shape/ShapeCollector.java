@@ -9,19 +9,23 @@ public class ShapeCollector {
     }
     public boolean addShape(Shape shape){
 
-        return false;
+        return list.add(shape);
     }
     public boolean removeShape(Shape shape){
 
-        return false;
+        return list.remove(shape);
     }
     public Shape getShape(int index){
 
-        return null;
+        if((index + 1) <= list.size()){
+            return list.get(index);
+        } else {
+            return null;
+        }
     }
     public void showShapes(){
-        //for(Shape s: list){
-            //System.out.println(s.getName());
-        //}
+        for(Shape s: list){
+            System.out.println(s.getName());
+        }
     }
 }
