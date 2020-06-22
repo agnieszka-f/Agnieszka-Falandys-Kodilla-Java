@@ -15,7 +15,7 @@ public final class Continent{
     public List<Country> getListOfCountries(){
         return new ArrayList<>(listOfCountries);
     }
-    public String getContinentName(){
+    public String getName(){
         return nameContinent;
     }
 

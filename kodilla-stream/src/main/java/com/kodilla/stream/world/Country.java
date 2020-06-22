@@ -12,7 +12,7 @@ public final class Country{
     public BigDecimal numberOfPeople(){
         return quantity;
     }
-    public String getCountryName(){
+    public String getName(){
         return name;
     }
     public BigDecimal getQuantity(){
