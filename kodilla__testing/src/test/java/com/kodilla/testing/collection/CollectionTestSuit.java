@@ -40,17 +40,7 @@ public class CollectionTestSuit {
         //When
         list2 = collection.exterminate(list1);
 
-        int result = 0;
-        for(Integer i: list2){
-            if(i % 2 == 0){
-                System.out.println("Element parzysty: " + i);
-            } else{
-                System.out.println("Znaleziono element nieprzysty: " + i);
-                result++;
-            }
-        }
         //Then
-        Assert.assertEquals(0,result);
         Assert.assertEquals(3,list2.size());
     }
 }
