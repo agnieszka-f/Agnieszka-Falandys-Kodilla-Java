@@ -1,9 +1,5 @@
 package com.kodilla.testing.collection;
 
-import com.kodilla.testing.calculator.CalculatorEnum;
-import com.kodilla.testing.user.SimpleUser;
-import com.kodilla.testing.calculator.Calculator;
-import com.kodilla.testing.collection.OddNumbersExterminator;
 import java.util.*;
 import org.junit.*;
 
@@ -11,8 +7,8 @@ import org.junit.*;
 public class CollectionTestSuit {
 
     OddNumbersExterminator collection = new OddNumbersExterminator();
-    List<Integer> list1 = new ArrayList<>();
-    List<Integer> list2 = new ArrayList<>();
+    List<Integer> numbers = new ArrayList<>();
+    List<Integer> evenNumbers = new ArrayList<>();
 
     @Before
     public void before(){
@@ -25,22 +21,22 @@ public class CollectionTestSuit {
     @Test
     public void testOddNumbersExterminatorEmptyList(){
         //When
-        list2 = collection.exterminate(list1);
+        evenNumbers = collection.exterminate(numbers);
         //Then
-        Assert.assertEquals(0,list2.size());
+        Assert.assertEquals(0, evenNumbers.size());
     }
     @Test
     public void testOddNumbersExterminatorNormalList(){
         //Given
-        list1.add(8);
-        list1.add(2);
-        list1.add(5);
-        list1.add(9);
-        list1.add(4);
+        numbers.add(8);
+        numbers.add(2);
+        numbers.add(5);
+        numbers.add(9);
+        numbers.add(4);
         //When
-        list2 = collection.exterminate(list1);
+        evenNumbers = collection.exterminate(numbers);
 
         //Then
-        Assert.assertEquals(3,list2.size());
+        Assert.assertEquals(3, evenNumbers.size());
     }
 }
